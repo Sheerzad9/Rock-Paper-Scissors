@@ -24,6 +24,7 @@ fun main() {
             playerChoice.equals("rock") && computerChoice.lowercase().equals("scissors") -> printHelper("Win", playerChoice, computerChoice);
             playerChoice.equals("paper") && computerChoice.lowercase().equals("rock") -> printHelper("Win", playerChoice, computerChoice);
             playerChoice.equals("scissors") && computerChoice.lowercase().equals("paper") -> printHelper("Win", playerChoice, computerChoice);
+            !playerChoice.equals("rock") || !playerChoice.equals("paper") || !playerChoice.equals("scissors") -> println("Please enter a valid input (Rock, Paper or Scissors), you entered: $playerChoice");
             else -> printHelper("LOSE", playerChoice, computerChoice);
         }
     } while (true);
